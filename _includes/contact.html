@@ -4,11 +4,21 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">Let's Get In Touch!</h2>
                 <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <p>Ready to start your next project with us? That's great! Give us a call, submit and equiry or send us an email and we will get back to you as soon as possible!</p>
             </div>
         <div class="col-lg-2 col-lg-offset-2 text-center">
+                <h4 class="section-heading">Make an enquiry </h4>
+                <form class="contact-form" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
+                    <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}/pages/thankyou.html' />
+                    <input required="required" id="name" placeholder="* Name" type='text' name='name' />
+                    <input required="required" id="email" placeholder="* Email" type='email' name='email' />
+                    <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
+                    <input type='submit' value='Send' />
+                </form>
+        </div>
+        <div class="col-lg-2 col-lg-offset-2 text-center">
             <a href="tel:{{ site.phone }}">
-                <i class="fa fa-mobilephone-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <i class="fa fa-mobile-phone fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                 <p>{{ site.phone }}</p>
             </a>
         </div>

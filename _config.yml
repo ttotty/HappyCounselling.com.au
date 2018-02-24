@@ -5,7 +5,7 @@ description: "Person centred counselling. Online or, in person if you are in Can
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://HappyCounselling.com.au" # the base hostname & protocol for your site
 
-phone: "+61 40 0000 000"
+phone: "040 0000 000"
 
 
 # google analytics tracking ID
