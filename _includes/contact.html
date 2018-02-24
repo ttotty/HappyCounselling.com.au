@@ -8,8 +8,11 @@
             </div>
         <div class="col-lg-2 col-lg-offset-2 text-center">
                 <h4 class="section-heading">Make an enquiry </h4>
+                <p id="thank-you-message" class="hidden" style="color:green;">
+                        Thank you for contacting us we'll get back to you, as soon as we can.
+                </p>
                 <form class="contact-form" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
-                    <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}/pages/thankyou.html' />
+                    <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}#thank-you' />
                     <input required="required" id="name" placeholder="* Name" type='text' name='name' />
                     <input required="required" id="email" placeholder="* Email" type='email' name='email' />
                     <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>

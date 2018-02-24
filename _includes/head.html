@@ -32,6 +32,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+        window.onload = (function(){
+            if(window.location.hash == '#thank-you'){
+            document.getElementById('thank-you-message').className = 'none';
+            }
+            })
+      </script>
+
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.baseurl }}">
 </head>
