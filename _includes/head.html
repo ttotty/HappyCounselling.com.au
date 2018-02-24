@@ -35,7 +35,7 @@
     <script type="text/javascript">
         window.onload = (function(){
             if(window.location.hash == '#thank-you'){
-            document.getElementById('thank-you-message').className = 'bg-success text-white';
+            document.getElementById('thank-you-message').className = 'bg-primary';
             location.hash = "#contact";
             history.pushState("", document.title, window.location.pathname + window.location.search);
             }
