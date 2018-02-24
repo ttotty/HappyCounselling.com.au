@@ -12,11 +12,23 @@
                         Thank you for contacting us we'll get back to you, as soon as we can.
                 </p>
                 <form class="contact-form" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
-                    <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}#thank-you' />
-                    <input required="required" id="name" placeholder="* Name" type='text' name='name' />
-                    <input required="required" id="email" placeholder="* Email" type='email' name='email' />
-                    <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
-                    <input type='submit' value='Send' />
+                    <div class="row">
+                        <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}#thank-you' />
+                    </div>
+                    <div class="row">
+                        <input required="required" id="name" placeholder="* Name" type='text' name='name' />
+                    </div>
+                    <div class="row">
+                        <input required="required" id="email" placeholder="* Email" type='email' name='email' />
+                    </div>
+                        <div class="row"><input id="telephone" placeholder="Telephone" type='tel' name='telephone' />
+                    </div>
+                    <div class="row">
+                        <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
+                    </div>
+                    <div class="row">
+                        <input type='submit' value='Send' />
+                    </div>
                 </form>
         </div>
         <div class="col-lg-2 col-lg-offset-2 text-center">

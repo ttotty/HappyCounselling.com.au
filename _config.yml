@@ -4,7 +4,6 @@ email: "HappCounselling1@gmail.com"
 description: "Person centred counselling. Online or, in person if you are in Canberra."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://HappyCounselling.com.au" # the base hostname & protocol for your site
-
 phone: "040 0000 000"
 
 
