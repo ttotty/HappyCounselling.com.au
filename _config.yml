@@ -12,8 +12,9 @@ twitter_username:
 analytics: "UA-114685624-1"
 google-site-verification:
 
-  # Contact form
-api_token: # Enter API token here
+
+# Contact form
+contact_PK: # Enter API token here. go to https://getsimpleform.com/ and choose send me a token with email address
 
 # Build settings
 markdown: kramdown
