@@ -1,11 +1,16 @@
 <section class="bg-primary" id="enquiry">
     <div class="container">
-        <form class="contact-form" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
-            <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}/pages/thankyou.html' />
-            <input required="required" id="name" placeholder="* Name" type='text' name='name' />
-            <input required="required" id="email" placeholder="* Email" type='email' name='email' />
-            <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
-            <input type='submit' value='Send' />
-        </form>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Make an enquiry </h2>
+                <form class="contact-form" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
+                    <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}/pages/thankyou.html' />
+                    <input required="required" id="name" placeholder="* Name" type='text' name='name' />
+                    <input required="required" id="email" placeholder="* Email" type='email' name='email' />
+                    <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
+                    <input type='submit' value='Send' />
+                </form>
+            </div>
+        </div>
     </div>
 </section>
