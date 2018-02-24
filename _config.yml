@@ -7,8 +7,8 @@ url: "http://HappyCounselling.com.au" # the base hostname & protocol for your si
 
 twitter_username:
 github_username:
-analytics: 
-google_verification:
+# google analytics tracking ID
+analytics: "UA-114685624-1"
 
 # Build settings
 markdown: kramdown
