@@ -1,7 +1,7 @@
 # Site settings
 title: "Happy Counselling"
 email: "HappCounselling1@gmail.com"
-description: "Person centred counselling. Online or, in person if you are in Canberra."> # this means to ignore newlines until "baseurl:"
+description: "Person centred counselling. Online or, in person if you are in Canberra."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://HappyCounselling.com.au" # the base hostname & protocol for your site
 
