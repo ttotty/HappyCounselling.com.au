@@ -1,15 +1,23 @@
 # Site settings
 title: "Happy Counselling"
 email: "HappCounselling1@gmail.com"
-description: > # this means to ignore newlines until "baseurl:"
+description: "Person centred counselling. Online or, in person if you are in Canberra."> # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://HappyCounselling.com.au" # the base hostname & protocol for your site
 
 twitter_username:
-github_username:
+
+
 # google analytics tracking ID
 analytics: "UA-114685624-1"
+google-site-verification:
+
+  # Contact form
+api_token: # Enter API token here
 
 # Build settings
 markdown: kramdown
 
+exclude: [
+    .gitignore
+]
