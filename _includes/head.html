@@ -36,7 +36,8 @@
         window.onload = (function(){
             if(window.location.hash == '#thank-you'){
             document.getElementById('thank-you-message').className = 'none';
-           
+            location.hash = "#thank-you-message";
+            history.pushState("", document.title, window.location.pathname + window.location.search);
             }
             })
       </script>
