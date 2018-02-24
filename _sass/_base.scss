@@ -240,9 +240,9 @@ $colorBg: $alabaster;
 .form {
     padding: $spaceDouble $space;
     background: $colorBg;
-    @include breakpoint(small) {
+   /* @include breakpoint(small) {
         padding: $spaceDouble*2 $space;
-    }
+    }*/
     input,
     textarea {
         @extend %form-fields;
