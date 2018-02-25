@@ -12,7 +12,7 @@
                 <p id="thank-you-message" class="hidden">
                     Thank you for contacting us we'll get back to you, as soon as we can.
                 </p>
-                <form class="form-horizontal" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
+                <form action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
                     <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}#thank-you' />
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -21,7 +21,7 @@
                         <input  class="form-control" required="required" id="name" placeholder="* Name" type='text' name='name' />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon">@</span>
+                        <span class="input-group-addon input-group-single-character">@</span>
                         <input  class="form-control" required="required" id="email" placeholder="* Email" type='email' name='email' />
                     </div>
                     <div class="input-group">
