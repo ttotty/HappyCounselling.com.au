@@ -13,7 +13,7 @@ google-site-verification:
 
 
 # Contact form
-contact_PK: "74232faa25040a3d469d3b413eb8691c" # Enter API token here. go to https://getsimpleform.com/ and choose send me a token with email address
+contact_PK: #"74232faa25040a3d469d3b413eb8691c" # Enter API token here. go to https://getsimpleform.com/ and choose send me a token with email address
 # Submissions go here https://getsimpleform.com/messages?api_token=private_key
 # emails sent via http://simpleform.mailinator.com/
 # JSON messages here https://getsimpleform.com/messages.json?api_token=private_key
