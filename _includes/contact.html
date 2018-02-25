@@ -37,7 +37,25 @@
                         <textarea class="form-control" id="Field10" name="Field10" placeholder="Enter your message here..." cols="30" rows="7" maxlength="2000"></textarea>
                     </div>
                     <div class="row">
-                        <p/>
+                        <label>
+                            Please check the box below.
+                        </label>
+
+                        <script src="https://www.google.com/recaptcha/api.js"></script>
+
+                        <noscript>
+                            &lt;style type="text/css"&gt; form li.captcha label.desc{ display:none; } form li.captcha{ border-bottom:1px dotted #ccc;
+                            padding-bottom:1.2em; } &lt;/style&gt;
+                        </noscript>
+                        <div class="g-recaptcha" data-sitekey="6Lds3D8UAAAAAPcAz2bYCfSuvZYffjOXi6bVvPhO">
+                            <div style="width: 304px; height: 78px;">
+                                <div>
+                                    <iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Lds3D8UAAAAAPcAz2bYCfSuvZYffjOXi6bVvPhO&amp;co=aHR0cHM6Ly9oYXBweWNvdW5zZWxsaW5nLnd1Zm9vLmNvbTo0NDM.&amp;hl=en&amp;v=v1519325468512&amp;size=normal&amp;cb=bbxtv76nnvf8"
+                                        width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                </div>
+                                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <button type="submit" class="btn btn-default btn-xl">
