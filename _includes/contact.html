@@ -40,13 +40,17 @@
                         <p/>
                     </div>
                     <div class="row">
-                        <button type="submit" class="g-recaptcha btn btn-default btn-xl"
-                        data-sitekey="{{ site.recapturePK }}" data-callback="onSubmit"
-                        data-badge="inline">
+                        <button id="submitButton" class="btn btn-default btn-xl">
                             <span class="glyphicon glyphicon-send"></span> Send
                         </button>
                     </div>
+                    <div class="row">
+                        <div id='recaptcha' class="g-recaptcha" data-sitekey="{ site.recapturePK }}"
+                         data-callback="onSubmit" data-size="invisible" data-badge="inline">
+                        </div>
+                    </div>
                 </form>
+                <script>onload();</script>
             </div>
 
             <div class="col-lg-2 col-lg-offset-2 text-center">
