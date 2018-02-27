@@ -41,7 +41,8 @@
                     </div>
                     <div class="row">
                         <button type="submit" class="g-recaptcha btn btn-default btn-xl"
-                        data-sitekey="yourKey" data-callback="onSubmit">
+                        data-sitekey="{{ site.recapturePK }}" data-callback="onSubmit"
+                        data-badge="inline">
                             <span class="glyphicon glyphicon-send"></span> Send
                         </button>
                     </div>
