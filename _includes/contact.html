@@ -34,13 +34,14 @@
                         <span class="input-group-addon">
                             <i class="glyphicon glyphicon-align-left"></i>
                         </span>
-                        <textarea class="form-control" id="Field10" name="Field10" placeholder="Enter your message here..." cols="30" rows="7" maxlength="2000"></textarea>
+                        <textarea class="form-control" id="messageText" name="messageText" 
+                        placeholder="Enter your message here..." cols="30" rows="7" maxlength="2000"></textarea>
                     </div>
                     <div class="row">
                         <p/>
                     </div>
                     <div class="row">
-                        <button id="submitButton" class="btn btn-default btn-xl">
+                        <button id="submitButton" class="btn btn-default btn-xl" onclick="validate();" >
                             <span class="glyphicon glyphicon-send"></span> Send
                         </button>
                     </div>
@@ -50,7 +51,6 @@
                         </div>
                     </div>
                 </form>
-                <script>onload();</script>
             </div>
 
             <div class="col-lg-2 col-lg-offset-2 text-center">
