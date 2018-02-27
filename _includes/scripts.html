@@ -1,3 +1,21 @@
+<script type="text/javascript">
+    window.onload = (function(){
+        if(window.location.hash == '#thank-you'){
+        document.getElementById('thank-you-message').className = 'bg-primary';
+        location.hash = "#contact";
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
+        })
+  </script>
+
+<!-- recapture -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/javascript">
+    var onSubmit = function(response) {
+      document.getElementById("equiryform").submit();
+    };
+</script>
+
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
@@ -11,3 +29,4 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+
