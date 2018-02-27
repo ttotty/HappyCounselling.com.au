@@ -32,6 +32,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+    function onload() {
+        var element = document.getElementById('submitButton');
+        element.onclick = validate;
+    }
+  </script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.baseurl }}">
 </head>
