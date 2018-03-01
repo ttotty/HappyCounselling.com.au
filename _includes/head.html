@@ -41,16 +41,12 @@
         $('#equiryform').submit(function (e) {
             if (e.isDefaultPrevented()) return
             grecaptcha.execute();
+            console.log(grecaptcha.getResponse());
             console.log('recapture executed');
             document.getElementById('thank-you-message').className = 'bg-info';
             location.hash = "#contact";
             history.pushState("", document.title, window.location.pathname + window.location.search);
         })
-    }
-
-    function onload() {
-      //  var element = document.getElementById('submitButton');
-      //  element.onclick = validate;
     }
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
