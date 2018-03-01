@@ -31,23 +31,29 @@
 <![endif]-->
 
 <!-- recapture -->
-<script>
-    function onSubmit(token) {
-        console.log('form submitted');
-    }
-      
-    function validate(event) {
-        alert('in validate');
-        $('#equiryform').submit(function (e) {
-            if (e.isDefaultPrevented()) return
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#equiryform').validator().on('submit', function (e) {
+          if (e.isDefaultPrevented()) {
+            // handle the invalid form...
+            console.log("validation failed");
+          } else {
+            // everything looks good!
+            e.preventDefault();
+            console.log("validation success");
             grecaptcha.execute();
-            alert(grecaptcha.getResponse());
-            alert('recapture executed');
             document.getElementById('thank-you-message').className = 'bg-info';
             location.hash = "#contact";
             history.pushState("", document.title, window.location.pathname + window.location.search);
-        })
-    }
+          }
+        });
+    }); 
+
+    function onSubmit(token){
+        console.log('form submitted');
+        document.getElementById("equiryform").submit();
+    };
+
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
