@@ -8,26 +8,6 @@
         })
   </script>
 
-<!-- recapture -->
-<script>
-        function onSubmit(token) {
-            console.log('form submitted');
-        }
-      
-        function validate(event) {
-            console.log('in validate 1');
-            $('#equiryform').submit(function (e) {
-                console.log('in validate 2');
-            if (e.isDefaultPrevented()) return
-            console.log('in validate 3');
-                grecaptcha.execute();
-                console.log('in validate 4');
-            })
-        }
-</script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
