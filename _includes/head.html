@@ -37,10 +37,14 @@
     }
       
     function validate(event) {
+        console.log('in validate');
         $('#equiryform').submit(function (e) {
             if (e.isDefaultPrevented()) return
             grecaptcha.execute();
             console.log('recapture executed');
+            document.getElementById('thank-you-message').className = 'bg-info';
+            location.hash = "#contact";
+            history.pushState("", document.title, window.location.pathname + window.location.search);
         })
     }
 
