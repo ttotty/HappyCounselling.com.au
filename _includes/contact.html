@@ -13,7 +13,11 @@
             <div class="col-lg-2 col-lg-offset-2 text-center">
                 <hr class="light mini" />
                 <h4 class="section-heading">Submit an enquiry </h4>
-                <form id="equiryform" action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" method="post">
+                <form id="equiryform" 
+                action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" 
+                method="post"
+                data-toggle="validator" 
+                role="form" >
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="glyphicon glyphicon-user"></i>
