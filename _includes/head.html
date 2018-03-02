@@ -30,25 +30,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- recapture -->
-<script type="text/javascript">
-$('#enquiryform').on('submit', function (e) {
-        if (!e.isDefaultPrevented()) {
-            // handle the invalid form...
-            console.log("validation failed");
-        } else {
-            // everything looks good!
-            e.preventDefault();
-            console.log("validation success");
-            grecaptcha.execute();
-            document.getElementById('thank-you-message').className = 'bg-info';
-            location.hash = "#contact";
-            history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
-    });
-</script>
-
-
 <!-- Favicon -->
 <link rel="shortcut icon" href="{{ "/favicon.png?v=2" | prepend: site.baseurl }}">
 

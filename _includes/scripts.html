@@ -12,3 +12,21 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
 
+<!-- recapture -->
+<script type="text/javascript">
+    $('#enquiryform').on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                // handle the invalid form...
+                console.log("validation failed");
+            } else {
+                // everything looks good!
+                e.preventDefault();
+                console.log("validation success");
+                grecaptcha.execute();
+                document.getElementById('thank-you-message').className = 'bg-info';
+                location.hash = "#contact";
+                history.pushState("", document.title, window.location.pathname + window.location.search);
+            }
+    });
+</script>
+
