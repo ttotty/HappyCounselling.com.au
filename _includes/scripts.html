@@ -15,11 +15,9 @@
 <!-- recapture -->
 <script type="text/javascript">
     $('#enquiryform').on('submit', function (e) {
-            if (!e.isDefaultPrevented()) {
-                // handle the invalid form...
+            if (e.isDefaultPrevented()) {
                 console.log("validation failed");
             } else {
-                // everything looks good!
                 e.preventDefault();
                 console.log("validation success");
                 grecaptcha.execute();
