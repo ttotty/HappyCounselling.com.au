@@ -13,20 +13,21 @@
             <div class="col-lg-2 col-lg-offset-2 text-center">
                 <hr class="light mini" />
                 <h4 class="section-heading">Submit an enquiry </h4>
-                <form id="equiryform" 
+                <form id="enquiryform" 
                 action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" 
                 method="post"
-                data-toggle="validator" 
-                role="form" >
+                role="form">
+                    <div class="messages"></div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="glyphicon glyphicon-user"></i>
                         </span>
-                        <input class="form-control" required="required" id="name" placeholder="* Name" type='text' name='name' />
+                        <input class="form-control" required="required" id="name" placeholder="* Name" type='text' name='name' 
+                        data-error="Name is required."/>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon input-group-single-character">@</span>
-                        <input class="form-control" required="required" id="email" placeholder="* Email" type='email' name='email' />
+                        <input class="form-control" required="required" id="email" placeholder="* Email" type='email' name='email' />   
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -44,19 +45,19 @@
                     <div class="row">
                         <p/>
                     </div>
+                   
+                    <div class="row">
+                        <div id='recaptcha' class="g-recaptcha" data-sitekey="{{ site.recapturePK }}"
+                         data-size="invisible" data-badge="inline">
+                        </div>
+                    </div>
                     <div class="row">
                         <button id="submitButton" class="btn btn-default btn-xl" type="submit">
                             <span class="glyphicon glyphicon-send"></span> Send
                         </button>
                     </div>
-                    <div class="row">
-                        <div id='recaptcha' class="g-recaptcha" data-sitekey="{{ site.recapturePK }}"
-                         data-callback="onSubmit" data-size="invisible" data-badge="inline">
-                        </div>
-                    </div>
                 </form>
             </div>
-            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             
             <div class="col-lg-2 col-lg-offset-2 text-center">
                 <hr class="light mini" />
