@@ -34,32 +34,25 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function onSubmit(token) {
-        console.log(token);
-        // document.getElementById("enquiryform").submit(); 
-        //action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" 
-        //         method="post"
-       var url = "https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}";
-
-        $.ajax({
+       //var url = "https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}";
+       var url = "https://formrelay.com/r/tAqqEBDIKp";
+       $.ajax({
             type: "POST",
             url: url,
             data: $("#enquiryform").serialize(), 
             success: function(data)
             {
-                console.log(data);
+                console.log("form post success");
             }
             });
 
         document.getElementById('thank-you-message').className = 'bg-info';
         scrollToAnchor('contact');
-       // location.hash = "#contact";
-        //history.pushState("", document.title, window.location.pathname + window.location.search);
     }
 
     function scrollToAnchor(aid){
         var aTag = $("a[name='"+ aid +"']");
         aTag.scrollTop();
-        //$('html,body').animate({scrollTop: aTag.offset().top},'slow');
     }
 
     function validate(event) {
