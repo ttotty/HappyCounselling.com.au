@@ -12,27 +12,3 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
 
-<!-- recapture -->
-<script type="text/javascript">
-    var onSubmit = function(response) {
-        alert("1");
-        document.getElementById("enquiryform").submit(); 
-        document.getElementById('thank-you-message').className = 'bg-info';
-        location.hash = "#contact";
-        history.pushState("", document.title, window.location.pathname + window.location.search);
-    };
-
-    $('#enquiryform')
-        .on('submit', function (e) {
-            alert("2");
-            if (e.isDefaultPrevented()) {
-                console.log("validation failed");
-            } else {
-                alert("3");
-                e.preventDefault();
-                console.log("validation success");
-                grecaptcha.execute();
-            }
-    });
-</script>
-
