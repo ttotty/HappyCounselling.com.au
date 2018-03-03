@@ -34,7 +34,7 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function onSubmit(token) {
-        alert(token);
+        console.log(token);
         document.getElementById("enquiryform").submit(); 
         document.getElementById('thank-you-message').className = 'bg-info';
         location.hash = "#contact";
@@ -46,7 +46,6 @@
         event.preventDefault();
         var enquiryForm = document.getElementById("enquiryform");
         if (!enquiryForm.checkValidity || enquiryForm.checkValidity()) {
-            alert("6");
             console.log("validation success");
             grecaptcha.execute();
         } else {
