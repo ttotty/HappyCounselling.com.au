@@ -34,7 +34,7 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function onSubmit(token) {
-       e.preventDefault();
+     //  e.preventDefault();
        var url = "https://formrelay.com/r/{{ site.contact_PK }}";
        $.ajax({
             type: "POST",
@@ -46,6 +46,8 @@
                 document.getElementById('thank-you-message').className = 'bg-info';
                 scrollTo('contact');
                 window.location.assign("{{ site.url }}");
+                $('#enquiryform')[0].reset();
+                grecaptcha.reset();
             }
         });
     }
