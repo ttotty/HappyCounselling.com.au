@@ -44,12 +44,13 @@
             {
                 console.log("form post success");
                 document.getElementById('thank-you-message').className = 'bg-info';
-                scrollTo('contact');
-                window.location.assign("{{ site.url }}");
+              //  scrollTo('contact');
+              //  window.location.assign("{{ site.url }}");
                 $('#enquiryform')[0].reset();
                 grecaptcha.reset();
             }
         });
+        return false;
     }
 
     function scrollTo(id){
