@@ -34,8 +34,8 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function onSubmit(token) {
-       //var url = "https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}";
-       var url = "https://formrelay.com/r/tAqqEBDIKp";
+       e.preventDefault();
+       var url = "https://formrelay.com/r/{{ site.contact_PK }}";
        $.ajax({
             type: "POST",
             url: url,
@@ -43,15 +43,15 @@
             success: function(data)
             {
                 console.log("form post success");
+                document.getElementById('thank-you-message').className = 'bg-info';
+                scrollTo('contact');
+                window.location.assign("{{ site.url }}");
             }
-            });
-
-        document.getElementById('thank-you-message').className = 'bg-info';
-        scrollToAnchor('contact');
+        });
     }
 
-    function scrollToAnchor(aid){
-        var aTag = $("a[name='"+ aid +"']");
+    function scrollTo(id){
+        var aTag = $("#"+ id);
         aTag.scrollTop();
     }
 
