@@ -35,7 +35,21 @@
 <script type="text/javascript">
     function onSubmit(token) {
         console.log(token);
-       // document.getElementById("enquiryform").submit(); 
+        // document.getElementById("enquiryform").submit(); 
+        //action="https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}" 
+        //         method="post"
+       var url = "https://getsimpleform.com/messages?form_api_token={{ site.contact_PK }}";
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#enquiryform").serialize(), 
+            success: function(data)
+            {
+                console.log(data);
+            }
+            });
+
         document.getElementById('thank-you-message').className = 'bg-info';
         scrollToAnchor('contact');
        // location.hash = "#contact";
@@ -44,7 +58,8 @@
 
     function scrollToAnchor(aid){
         var aTag = $("a[name='"+ aid +"']");
-        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+        aTag.scrollTop();
+        //$('html,body').animate({scrollTop: aTag.offset().top},'slow');
     }
 
     function validate(event) {
