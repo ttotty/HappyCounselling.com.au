@@ -37,7 +37,7 @@
        token.preventDefault();
        var url = "https://formrelay.com/r/{{ site.contact_PK }}";
 
-        $.post("url", $("#enquiryform").serialize(), function(result){
+        $.post(url, $("#enquiryform").serialize(), function(result){
             console.log(result);
         });
 
