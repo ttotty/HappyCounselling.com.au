@@ -57,19 +57,6 @@
         var element = document.getElementById('submitButton');
         element.onclick = validate;
     }
-
-    $('#enquiryform')
-        .on('submit', function (e) {
-            alert("2");
-            if (e.isDefaultPrevented()) {
-                console.log("validation failed");
-            } else {
-                alert("3");
-                e.preventDefault();
-                console.log("validation success");
-                grecaptcha.execute();
-            }
-    });
 </script>
 
 <!-- Favicon -->
