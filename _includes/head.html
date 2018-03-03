@@ -43,11 +43,11 @@
 
     function validate(event) {
         alert("5");
-        if (e.isDefaultPrevented()) {
+        if (event.isDefaultPrevented()) {
             console.log("validation failed");
         } else {
             alert("6");
-            e.preventDefault();
+            event.preventDefault();
             console.log("validation success");
             grecaptcha.execute();
         }
