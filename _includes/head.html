@@ -42,10 +42,10 @@
     }
 
     function validate(event) {
-        alert("5");
-        event.preventDefault();
+        //alert("5");
         var enquiryForm = document.getElementById("enquiryform");
         if (!enquiryForm.checkValidity || enquiryForm.checkValidity()) {
+            event.preventDefault();
             console.log("validation success");
             grecaptcha.execute();
         } else {
