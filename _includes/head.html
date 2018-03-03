@@ -34,11 +34,13 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function onSubmit(token) {
-       token.preventDefault();
        var url = "https://formrelay.com/r/{{ site.contact_PK }}";
 
         $.post(url, $("#enquiryform").serialize(), function(result){
             console.log(result);
+            document.getElementById('thank-you-message').className = 'bg-info';
+            $('#enquiryform')[0].reset();
+            grecaptcha.reset();
         });
 
 //       $.ajax({
