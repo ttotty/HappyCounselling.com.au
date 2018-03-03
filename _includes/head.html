@@ -37,12 +37,17 @@
         console.log(token);
         document.getElementById("enquiryform").submit(); 
         document.getElementById('thank-you-message').className = 'bg-info';
-        location.hash = "#contact";
-        history.pushState("", document.title, window.location.pathname + window.location.search);
+        scrollToAnchor('contact');
+       // location.hash = "#contact";
+        //history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
+    function scrollToAnchor(aid){
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
     }
 
     function validate(event) {
-        //alert("5");
         var enquiryForm = document.getElementById("enquiryform");
         if (!enquiryForm.checkValidity || enquiryForm.checkValidity()) {
             event.preventDefault();
