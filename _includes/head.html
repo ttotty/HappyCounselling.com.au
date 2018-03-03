@@ -43,13 +43,14 @@
 
     function validate(event) {
         alert("5");
-        if (event.isDefaultPrevented()) {
-            console.log("validation failed");
-        } else {
+        event.preventDefault();
+        var enquiryForm = document.getElementById("enquiryform");
+        if (!enquiryForm.checkValidity || enquiryForm.checkValidity()) {
             alert("6");
-            event.preventDefault();
             console.log("validation success");
             grecaptcha.execute();
+        } else {
+            console.log("validation failed");
         }
     }
 
