@@ -36,27 +36,30 @@
     function onSubmit(token) {
        var url = "https://formrelay.com/r/{{ site.contact_PK }}";
 
-        $.post(url, $("#enquiryform").serialize(), function(result){
-            console.log(result);
-            document.getElementById('thank-you-message').className = 'bg-info';
-            $('#enquiryform')[0].reset();
-            grecaptcha.reset();
-        });
-
-//       $.ajax({
-//            type: "POST",
-//            url: url,
-//            data: $("#enquiryform").serialize(), 
-//            success: function(data)
-//            {
-//                console.log("form post success");
-//                document.getElementById('thank-you-message').className = 'bg-info';
-//             //  scrollTo('contact');
-//              //  window.location.assign("{{ site.url }}");
-//                $('#enquiryform')[0].reset();
-//                grecaptcha.reset();
-//            }
+//        $.post(url, $("#enquiryform").serialize(), function(result){
+//            console.log(result);
+//            document.getElementById('thank-you-message').className = 'bg-info';
+//            $('#enquiryform')[0].reset();
+//            grecaptcha.reset();
 //        });
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#enquiryform").serialize(), 
+            success: function(data)
+            {
+                console.log("form post success");
+                document.getElementById('thank-you-message').className = 'bg-info';
+             //  scrollTo('contact');
+              //  window.location.assign("{{ site.url }}");
+                $('#enquiryform')[0].reset();
+                grecaptcha.reset();
+            },
+            error: function(xhr){
+              alert("An error occured: " + xhr.status + " " + xhr.statusText);
+            }
+        });
         return false;
     }
 
