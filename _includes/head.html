@@ -66,9 +66,14 @@
                  //   window.location.reload();
                 }
             },
+            statusCode: {
+                302: function(xhr) {
+                alert( "redirect" );
+            }
+            },
             complete: function(xhr, textStatus) {
                 console.log(xhr.status);
-                window.location.hash ="#thank-you"
+            //    window.location.hash ="#thank-you"
             }
         });
         return false;
