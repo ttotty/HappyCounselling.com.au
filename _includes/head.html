@@ -33,13 +33,13 @@
 <!-- recapture -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
-    window.onload = (function(){
-        if(window.location.hash == '#thank-you'){
-            alert("AAAA");
-             document.getElementById('thank-you-message').className = 'bg-info';
-             location.hash = "#thank-you-message";
-        }
-    })
+  //  window.onload = (function(){
+  //      if(window.location.hash == '#thank-you'){
+  //          alert("AAAA");
+  //           document.getElementById('thank-you-message').className = 'bg-info';
+  //           location.hash = "#thank-you-message";
+  //      }
+  //  })
 
     function onSubmit(token) {
        var url = "https://formrelay.com/r/{{ site.contact_PK }}";
@@ -71,11 +71,12 @@
                 302: function(xhr) {
                 alert( "redirect" );
             }
-            },
-            complete: function(xhr, textStatus) {
-                console.log(xhr.status);
-            //    window.location.hash ="#thank-you"
             }
+        //    ,
+        //    complete: function(xhr, textStatus) {
+        //        console.log(xhr.status);
+        //    //    window.location.hash ="#thank-you"
+        //    }
         });
         return false;
     }
