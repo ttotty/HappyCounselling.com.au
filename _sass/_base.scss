@@ -117,9 +117,9 @@ aside {
                 > a:focus {
                     color: $theme-primary !important;
             //        background-color: transparent;
-            //        &:hover {
-            //            background-color: transparent;
-            //        }
+                    &:hover {
+                        background-color: transparent;
+                    }
                 }
             }
         }
@@ -128,19 +128,17 @@ aside {
        // background-color: transparent;
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
-      //      color: rgba(white, .7);
+            color: rgba(white, .7);
             &:hover,
             &:focus {
-                //color: white;
-                color: darken($theme-primary, 10%);
+                color: white;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
             color: rgba($theme-text, .7);
             &:hover {
-                //color: white;
-                color: darken($theme-primary, 10%);
+                color: white;
             }
         }
         &.affix {
