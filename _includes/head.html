@@ -57,17 +57,12 @@
             complete: function(xhr, textStatus) {
                 console.log("complete");
                 document.getElementById('thank-you-message').className = 'bg-info';
-                scrollTo('contact');
                 $('#enquiryform')[0].reset();
                 grecaptcha.reset();
+                $("html, body").animate({ scrollTop: $('#thank-you-message').offset().top-60 }, 1000);
             }
         });
         return false;
-    }
-
-    function scrollTo(id){
-        var aTag = $("#"+ id);
-        aTag.scrollTop();
     }
 
     function validate(event) {
