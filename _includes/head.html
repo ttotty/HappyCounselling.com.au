@@ -38,7 +38,8 @@
         $.ajax({
             type: "POST",
             url: url,
-            data: $("#enquiryform").serialize(), 
+            data: $("#enquiryform").serialize(),
+            dataType: "json", 
             success: function(data)
             {
                 console.log("form post success");
@@ -55,6 +56,7 @@
                     $('#enquiryform')[0].reset();
                     grecaptcha.reset();
                     scrollTo('contact');
+                    window.location.reload();
                 }
             }
         });
