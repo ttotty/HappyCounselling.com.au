@@ -41,9 +41,7 @@
             data: $("#enquiryform").serialize(),
             dataType: "json",
             crossDomain: true,
-            xhrFields: {
-                withCredentials: true
-            },
+            contentType: 'application/json; charset=utf-8',
             headers: { 
                 Accept : "application/json; charset=utf-8"
             },
