@@ -41,9 +41,11 @@
             data: $("#enquiryform").serialize(),
             dataType: "json",
             crossDomain: true,
-            contentType: 'application/json; charset=utf-8',
+//            contentType: 'application/json; charset=utf-8',
             headers: { 
-                Accept : "application/json; charset=utf-8"
+                Accept : "application/json; charset=utf-8",
+                "Access-Control-Request-Method": "POST",
+                "Access-Control-Request-Headers": "x-requested-with"
             },
             success: function(data)
             {
