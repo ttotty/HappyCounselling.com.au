@@ -39,7 +39,8 @@
             type: "POST",
             url: url,
             data: $("#enquiryform").serialize(),
-            dataType: "json", 
+            dataType: "json",
+            ontentType: 'application/json',
             success: function(data)
             {
                 console.log("form post success");
