@@ -40,6 +40,10 @@
             url: url,
             data: $("#enquiryform").serialize(),
             dataType: "json",
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true
+            },
             headers: { 
                 Accept : "application/json; charset=utf-8"
             },
